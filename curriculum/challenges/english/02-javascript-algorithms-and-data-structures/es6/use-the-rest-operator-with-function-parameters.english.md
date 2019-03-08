@@ -62,7 +62,13 @@ console.log(sum(1, 2, 3)); // 6
 ## Solution
 <section id='solution'>
 
-```js
-// solution required
-```
+const sum = (function() {
+  "use strict";
+  return function sum(...args) {
+    // Remove this line: const args = [ x, y, z ];
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3));
+
 </section>
